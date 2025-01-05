@@ -24,3 +24,20 @@ This Python project is an **Email Tagging System** that automatically tags email
 You can install the necessary libraries using the following command:
 ```bash
 pip install pywin32 pandas
+```
+
+## Configure Your Outlook Email:
+
+In the `fetch_and_tag_emails()` function, you need to specify your Outlook email address.
+
+On line 45, you will see the following line of code:
+
+```python
+inbox = outlook.Folders.Item("INPUT_OUTLOOK_EMAIL_HERE").Folders("Inbox")
+```
+Replace "INPUT_OUTLOOK_EMAIL_HERE" with your actual Outlook email address. For example:
+
+```python
+inbox = outlook.Folders.Item("youremail@domain.com").Folders("Inbox")
+```
+This will allow the program to fetch emails from your Outlook inbox.
